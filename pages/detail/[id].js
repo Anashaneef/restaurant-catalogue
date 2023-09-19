@@ -1,3 +1,6 @@
+import Container from "../../components/styled/Container";
+import Image from "../../components/styled/Image";
+
 export default function Detail({ restaurant }) {
 	const {
 		name,
@@ -6,8 +9,9 @@ export default function Detail({ restaurant }) {
 		menus: { foods, drinks },
 	} = restaurant;
 	return (
-		<div className="container">
-			<img
+		<Container maxWidth="80%">
+			<Image
+				height="500px"
 				src={`https://restaurant-api.dicoding.dev/images/large/${pictureId}`}
 				alt={name}
 			/>
@@ -36,7 +40,7 @@ export default function Detail({ restaurant }) {
 					))}
 				</ul>
 			</main>
-		</div>
+		</Container>
 	);
 }
 
